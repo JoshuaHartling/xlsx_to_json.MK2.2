@@ -57,7 +57,20 @@ variables in the .json file that are absent from the Excel file will be added to
 * **add_new_devices:** *(only applicable to JSON2XLSX.exe)* when this boolean is true,
 devices in the .json file that are absent from the Excel file will be added to it.
 
-## Upload to FortiManager
+## How to use this Project
+* Download and extract this project to anywhere on your desktop.
+* Create an excel spreadsheet using the same format used in the *example.xlsx* file.
+  * First column is the hostname column.  First cell must be "hostname".
+  * Second column is the VDOM column.  First cell must be "vdom".
+  * First row is the metadata names row.
+  * Second row is the metadata's default (or global) value.
+* Fill in the metadata on the excel spreadsheet.
+* Open and edit the *user_settings.yml* file.  Enter the full filepath to the metadata excel file under **file_path**.
+Adjust any other desired settings.
+* Run *XLSX2JSON.exe*.  A .json output file will be created.
+* Upload the output file to FortiManager.
+
+## How to upload Metadata to FortiManager 
 To upload the .json file to FortiManger, log into FortiManager and navigate to the appropriate ADOM
 (if ADOM's have been enabled).  Navigate to Policy & Objects > Object Configurations > Advanced >
 Metadata Variables.  *Note: you may have to enable Metadata Variables using Feature Visibility
