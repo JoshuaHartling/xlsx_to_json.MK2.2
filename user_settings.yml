@@ -28,7 +28,7 @@ negate_devices: false  # set to true to include every device except the one(s) l
 variable_list: null  # include all MetaVariables
 
 # # toggle MetaVariable negation
-negate_variables: false  # set to true to include every MetaVariable except the one(s) listed in the device_list
+negate_variables: false  # set to true to include every MetaVariable except the one(s) listed in the variable_list
 
 # # update default values
 update_defaults: true  # if set to false, the global values row will be ignored when generating JSON
